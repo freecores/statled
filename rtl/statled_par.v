@@ -29,10 +29,10 @@ parameter STATLED_PULSE_CLKCNT 	= STATLED_CLK/1000 * STATLED_PULSE_MS;
 /******************************************************************************
 * Codes  
 ******************************************************************************/
-parameter CODE_ONE		= 16'b10_00_00_00_00_00_00_00;
-parameter CODE_TWO		= 16'b10_10_00_00_00_00_00_00;
-parameter CODE_THREE	= 16'b10_10_10_00_00_00_00_00;
-parameter CODE_FOUR		= 16'b10_10_10_10_00_00_00_00;
-parameter CODE_FIVE		= 16'b10_10_10_10_10_00_00_00;
-parameter CODE_SIX		= 16'b10_10_10_10_10_10_00_00;
-parameter CODE_50_50	= 16'b10_10_10_10_10_10_10_10;
+parameter CODE_ONE      = 16'b10_00_00_00_00_00_00_00;
+parameter CODE_TWO      = 16'b10_10_00_00_00_00_00_00;
+parameter CODE_THREE    = 16'b10_10_10_00_00_00_00_00;
+parameter CODE_FOUR     = 16'b10_10_10_10_00_00_00_00;
+parameter CODE_FIVE     = 16'b10_10_10_10_10_00_00_00;
+parameter CODE_SIX      = 16'b10_10_10_10_10_10_00_00;
+parameter CODE_50_50    = 16'b10_10_10_10_10_10_10_10;
