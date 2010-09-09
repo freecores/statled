@@ -39,7 +39,7 @@ assign rate = (pre == STATLED_PULSE_CLKCNT);
 // Capture status inputs
 //
 always @(posedge clk or posedge rst)
-	if (rst) 
+    if (rst) 
         str <= #tDLY 0;
     else 
         str <= #tDLY status;
@@ -48,19 +48,19 @@ always @(posedge clk or posedge rst)
 // Shift register and bit counter
 //
 always @(posedge clk or posedge rst)
-	if (rst) 
+    if (rst) 
         bcnt <= #tDLY 15;
-	else if (bcnt == 16)
+    else if (bcnt == 16)
         bcnt <= #tDLY 0;
-	else if (rate)
+    else if (rate)
         bcnt <= #tDLY bcnt + 1;
 
 always @(posedge clk or posedge rst)
-	if (rst) 
+    if (rst) 
         lsr <= #tDLY 0;
-	else if (bcnt == 16)
+    else if (bcnt == 16)
         lsr <= #tDLY cr;
-	else if (rate)
+    else if (rate)
         lsr <= #tDLY lsr << 1;
 
 assign led = rst? 1 : lsr[15];	
