@@ -7,10 +7,10 @@
 *
 ******************************************************************************/
 module statled (
-    input       		clk,
-    input       		rst,
-    input		[3:0]	status,
-    output              led
+    input           clk,
+    input           rst,
+    input  [3:0]    status,
+    output          led
 );
 
 `include "statled_par.v"
@@ -70,15 +70,15 @@ assign led = rst? 1 : lsr[15];
 //
 always @*
     case(str) 
-		0: cr = CODE_50_50;           // Default code
-		1: cr = CODE_ONE;             // State 1 
-		2: cr = CODE_TWO;             // State 2
-		3: cr = CODE_THREE;           // ....
-		4: cr = CODE_FOUR;            //
-		5: cr = CODE_FIVE;            //
-		6: cr = CODE_SIX;             //
-		
-		default: cr = 0;	         
-	endcase	
+        0: cr = CODE_50_50;           // Default code
+        1: cr = CODE_ONE;             // State 1 
+        2: cr = CODE_TWO;             // State 2
+        3: cr = CODE_THREE;           // ....
+        4: cr = CODE_FOUR;            //
+        5: cr = CODE_FIVE;            //
+        6: cr = CODE_SIX;             //
+        
+        default: cr = 0;	         
+    endcase	
 				 
 endmodule
